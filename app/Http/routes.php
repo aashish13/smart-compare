@@ -12,3 +12,10 @@
 */
 
 Route::get('/', 'MainController@index');
+Route::get('/search-result', 'MainController@search_result');
+Route::get('/product-details', 'MainController@product_details');
+Route::get('/login', 'MainController@login');
+Route::get('/signup', 'MainController@signup');
+
+//Admin routes
+Route::get('/admin', 'AdminController@index');
