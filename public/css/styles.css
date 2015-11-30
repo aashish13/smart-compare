@@ -1,22 +1,35 @@
 html,body {
+    
   height:100%;
+  
 }
 
 h1 {
-  font-family: Arial,sans-serif
-  font-size:80px;
+  font-family: Arial,sans-serif;
+    
+  font-size: 80px;
 }
 
 /* Custom container */
+
+.container-bi{
+    width: 119%;   
+    margin-left: -9%; 
+}
+
 .container-image{
-  background-image: url("../images/quora.png") ;
-  background-repeat: no-repeat;        
+  background-image: url("../images/quora.jpg") ;
+  background-repeat: no-repeat;   
+  //min-height: 100%;
+  
+  //max-width: 100%;
+ // background-size: 100%;
 }
 .container-full {
   
   background-size:100% auto;
-  
-  position: auto;
+  height: 40vw;
+  //position: auto;
   margin: 0 auto;
   width: 100%;
   min-height:100%;

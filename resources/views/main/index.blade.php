@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+<div class="container-bi">
     <div class="container-full container-image">
 
       <div class="row">
@@ -74,5 +75,6 @@
         <br><br>
         </div>
     </div>
+</div>
 </div>
 @endsection
