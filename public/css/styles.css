@@ -47,10 +47,11 @@ h1 {
   background-color: #f5f5f5;
 }
 .item-box{
-  width: 30%;
+  width: 260px;
   height: 150px;
-  margin: 5px;
+  margin: 8px;
   border: 2px solid #7f8c8d;
+  float: left;
 }
 .product-text{
 

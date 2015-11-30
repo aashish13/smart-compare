@@ -12,9 +12,10 @@
           
           <br><br><br>
           
-          <form class="col-lg-12"  action="search-result.html">
+          
+          <form class="col-lg-12"  action="search-result">
             <div class="input-group main-button" >
-            <input class="form-control input-lg" title="" placeholder="Enter the product you want to price compare. (eg. iphone6, moto g)" type="text">
+            <input class="form-control input-lg" title="" placeholder="Enter the product you want to price compare. (eg. iphone6, moto g)" type="text" name="search-keyword">
               <span class="input-group-btn"><button type="submit" class="btn btn-lg btn-info" type="button">Search</button></span>
             </div>
           </form>

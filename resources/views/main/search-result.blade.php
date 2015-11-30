@@ -19,8 +19,6 @@
   </nav>
 
 </header>
-
-
 <div class="row clearfix">
   <div class="col-lg-3">
     <div class="widget widget-list well">
@@ -36,58 +34,21 @@
     </div><!-- widget widget-list well -->
   </div>
   <div class="col-lg-9">
-
-
-
+  
   <div  class="row">
-    <div class="col-lg-4 item-box iphone" >
-    <img src="images/product.jpg" />
-      <p class="text-center"><a href="login.html">Iphone</a></p>
-    </div>
-    <div class="col-lg-4 item-box apple" >
-      <img src="images/product.jpg" />
-      <p class="text-center"><a href="login.html">Apple</a></p>
-    </div>
-    <div class="col-lg-4 item-box samsung" >
-      <img src="images/product.jpg" />  
-      <p class="text-center"><a href="login.html">Samsung</a></p>
-
-    </div>
-  </div>
-  <div  class="row">
-    <div class="col-lg-4 item-box iphone" >
-    <img src="images/product.jpg" />
-      <p class="text-center"><a href="login.html">Iphone</a></p>
-    </div>
-    <div class="col-lg-4 item-box apple" >
-      <img src="images/product.jpg" />
-      <p class="text-center"><a href="login.html">Apple</a></p>
-    </div>
-    <div class="col-lg-4 item-box samsung" >
-      <img src="images/product.jpg" />  
-      <p class="text-center"><a href="login.html">Samsung</a></p>
-
-    </div>
-  </div>
-  <div  class="row">
-    <div class="col-lg-4 item-box iphone" >
-    <img src="images/product.jpg" />
-      <p class="text-center"><a href="login.html">Iphone</a></p>
-    </div>
-    <div class="col-lg-4 item-box apple" >
-      <img src="images/product.jpg" />
-      <p class="text-center"><a href="login.html">Apple</a></p>
-    </div>
-    <div class="col-lg-4 item-box samsung" >
-      <img src="images/product.jpg" />  
-      <p class="text-center"><a href="login.html">Samsung</a></p>
-
-    </div>
+    @foreach ($bestbuy as $product)
+        <div class="item-box iphone">
+        <img src="{{$product['image']}}" />
+          <p class="text-center"><a href="login.html">{{$product['name']}}</a></p>
+        </div>
+    @endforeach
+    
+    
   </div>
   
   
 
-  <nav>
+<!--  <nav>
   <ul class="pager">
     <li><a href="#">Previous</a></li>
     <li class="active"><a href="#">1</a></li>
@@ -97,7 +58,7 @@
     <li><a href="#">10</a></li>
     <li><a href="#">Next</a></li>
   </ul>
-</nav>
+</nav>-->
   </div>
 </div>
 
