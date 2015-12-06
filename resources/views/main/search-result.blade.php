@@ -37,10 +37,12 @@
   
   <div  class="row">
     @foreach ($bestbuy as $product)
-        <div class="item-box iphone">
-        <img src="{{$product['image']}}" />
-          <p class="text-center"><a href="login.html">{{$product['name']}}</a></p>
-        </div>
+        <a href='product-details?id={{$product['productId']}}'>
+            <div class="item-box iphone">
+            <img src="{{$product['image']}}" />
+              <p class="text-center"><a href='product-details?id={{$product['productId']}}'>{{$product['name']}}</a></p>
+            </div>
+        </a
     @endforeach
     
     

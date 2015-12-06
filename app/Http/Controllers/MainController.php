@@ -20,13 +20,8 @@ class MainController extends Controller
         $text= Input::get('search-keyword');
         $bClient = new \GuzzleHttp\Client();
         
-        //$response=$bClient->request('GET','http://api.bestbuy.com/v1/categories?format=json&apiKey='.$best_buy_key->value.'&show=id,name')->getBody();
-        $response=$bClient->request('GET','http://api.bestbuy.com/v1/products((search='.$text.'*)&type=hardgood&new=true&active=true)?format=json&apiKey='.$best_buy_key->value)->getBody();
-        //return json_decode($response,true);
+        $response=$bClient->request('GET','http://api.bestbuy.com/v1/products((search='.$text.'*)&type=hardgood&condition=new&active=true)?format=json&apiKey='.$best_buy_key->value)->getBody();
         return view('main.search-result')->with('bestbuy',json_decode($response,true)['products']);
-        //http://api.bestbuy.com/v1/products((search='.$text.')&salePrice<500&categoryPath.id=pcmcat209000050006)?show=name,sku,salePrice&format=json&apiKey='.$best_buy_key->value
-        
-        
     }
     public function login()
     {
@@ -34,7 +29,12 @@ class MainController extends Controller
     }
     public function product_details()
     {
-       return view('main.product-detail');
+        $best_buy_key=  \App\AppConfig::where('key','best_buy_api_key')->first();   
+        $id= Input::get('id');
+        $bClient = new \GuzzleHttp\Client();
+        
+        $response=$bClient->request('GET','http://api.bestbuy.com/v1/products(productId='.$id.')?apiKey='.$best_buy_key->value.'&format=json')->getBody();
+        return view('main.product-detail')->with('product',json_decode($response,true)['products'][0]);
     }
     
     public function signup()

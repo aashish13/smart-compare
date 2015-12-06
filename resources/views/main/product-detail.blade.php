@@ -27,7 +27,7 @@
   
   <strong>  Product Description  </strong>
 
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<p>
+  <p>{!!$product['longDescription']!!}<p>
   
     
   </div>
@@ -45,19 +45,11 @@
     
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="images/iphone-1.jpg" alt="Chania" width="460" height="345">
+        <img src="{{$product['largeFrontImage']}}" alt="" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="images/iphone-2.jpg" alt="Chania" width="460" height="345">
-      </div>
-    
-      <div class="item">
-        <img src="images/iphone-3.jpg" alt="Flower" width="460" height="345">
-      </div>
-
-      <div class="item">
-        <img src="images/iphone-4.jpg" alt="Flower" width="460" height="345">
+        <img src="{{$product['largeImage']}}" alt="" width="460" height="345">
       </div>
     </div>
 
@@ -97,7 +89,7 @@
 
   <div class="col-lg-3" style="border:0px solid black">
     <div class="row">
-     <img src="images/bestbuy.jpg" style="width:50px;height:50px;float:left"> <p class="text-right"><a href="http://www.bestbuy.ca">CAD 224</a></p>
+        <img src="images/bestbuy.jpg" style="width:50px;height:50px;float:left"> <p class="text-right"><a target="_blank" href="{{$product['addToCartUrl']}}">CAD {{$product['salePrice']}}</a></p>
     </div>
     <div class="row">
       <img src="images/amazon.png" style="width:50px;height:50px;float:left"> <p class="text-right"><a href="http://www.amazon.ca">CAD 224</a></p>
